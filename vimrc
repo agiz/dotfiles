@@ -2,6 +2,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+scriptencoding utf-8
+set encoding=utf-8
+
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
@@ -105,3 +108,10 @@ set sidescroll=1
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+if has('gui_running')
+  "set guifont=Inconsolata\ XL\ Medium\ 9
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+endif
+
+set laststatus=2
